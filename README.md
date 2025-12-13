@@ -24,13 +24,27 @@ This workflow is created and maintained by GitHub. No manual CI/CD configuration
 The website is **not served directly from the repository**, but from the deployed artifact.
 
 ---
+## 🌐 Hosting & Accessibility
 
-## 🌐 Hosting Details
+This website is hosted using **GitHub Pages** and is **publicly accessible** by default.
 
-* Live URL: `https://username.github.io`
-* Served via **global CDN**
-* HTTPS enabled by default
-* Fast, scalable, production-grade hosting
+* **Live URL:** `https://username.github.io`
+* **Access:** Public (no authentication required)
+* **Hosting:** GitHub Pages (CDN-backed)
+* **Protocol:** HTTPS enabled
+
+The site is served from GitHub’s global CDN, not directly from the repository, ensuring fast and reliable access worldwide.
+
+---
+
+## 🔎 Why It Is Public
+
+* GitHub Pages sites are public by default
+* Content is served via CDN endpoints
+* Anyone with the URL can access the website
+* Repository visibility controls source access, not website access
+
+> ⚠️ Note: Even if the repository is private (GitHub Pro/Enterprise), GitHub Pages can still expose the site publicly unless explicitly restricted.
 
 ---
 
