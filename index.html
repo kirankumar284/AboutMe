@@ -1,101 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>About Me | Software Engineer</title>
 
     <style>
+        :root {
+            --primary: #2563eb;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f3f4f6;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
-            line-height: 1.6;
+            font-family: "Inter", "Segoe UI", sans-serif;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.7;
         }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 40px 20px;
+        .page {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
         }
 
-        .profile {
+        /* MAIN CARD */
+        .about-card {
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 30px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            gap: 40px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
         }
 
-        .profile img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
+        .profile-img {
+            flex-shrink: 0;
+        }
+
+        .profile-img img {
+            width: 220px;
+            height: 220px;
             object-fit: cover;
-            border: 5px solid #007bff;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
-        .profile-content h1 {
+        .about-content h1 {
             margin: 0;
             font-size: 2.2rem;
-            color: #007bff;
+            font-weight: 700;
         }
 
-        .profile-content h3 {
-            margin-top: 5px;
-            color: #555;
+        .about-content h3 {
+            margin: 8px 0 20px;
             font-weight: 500;
+            color: var(--primary);
         }
 
-        .profile-content p {
-            margin-top: 15px;
+        .about-content p {
+            color: var(--text-light);
+            margin-bottom: 16px;
         }
 
-        .skills {
+        /* SKILLS */
+        .skills-section {
             margin-top: 40px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: var(--card-bg);
+            padding: 35px 40px;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
         }
 
-        .skills h2 {
-            margin-top: 0;
-            color: #007bff;
+        .skills-section h2 {
+            margin: 0 0 20px;
+            font-size: 1.6rem;
         }
 
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 14px;
         }
 
         .skill {
-            background: #007bff;
-            color: #fff;
-            padding: 8px 14px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            padding: 12px 16px;
+            border-radius: 12px;
+            background: #eef2ff;
+            color: #1e40af;
+            font-size: 0.95rem;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .skill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
-            color: #777;
+            margin-top: 50px;
             font-size: 0.9rem;
+            color: var(--text-light);
         }
 
-        @media (max-width: 600px) {
-            .profile {
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .about-card {
+                flex-direction: column;
                 text-align: center;
             }
 
-            .profile img {
+            .profile-img img {
                 margin: auto;
             }
         }
@@ -104,51 +131,56 @@
 
 <body>
 
-    <div class="container">
+    <main class="page">
 
-        <!-- Profile Section -->
-        <section class="profile">
-            <img src="profile.jpg" alt="Profile Image">
+        <!-- ABOUT CARD -->
+        <section class="about-card">
+            <div class="profile-img">
+                <img src="profile.jpg" alt="Profile Image" />
+            </div>
 
-            <div class="profile-content">
+            <div class="about-content">
                 <h1>Your Name</h1>
                 <h3>Software Engineer</h3>
+
                 <p>
-                    I am a passionate Software Engineer with a strong interest in building
-                    scalable, user-friendly, and high-performance applications.
-                    I enjoy turning complex problems into simple, elegant solutions
-                    using clean and efficient code.
+                    I am a Software Engineer who enjoys crafting clean, intuitive,
+                    and scalable applications. I focus on writing maintainable
+                    code and delivering user-centered digital experiences.
                 </p>
+
                 <p>
-                    With experience in full-stack development, I work comfortably across
-                    frontend and backend technologies and continuously strive to learn
-                    and adapt to new tools and best practices in software development.
+                    My work spans across frontend and backend development, where I
+                    enjoy solving real-world problems, optimizing performance,
+                    and continuously learning new technologies to stay relevant
+                    in the fast-evolving tech ecosystem.
                 </p>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="skills">
-            <h2>Technical Skills</h2>
-            <div class="skill-list">
-                <span class="skill">HTML</span>
-                <span class="skill">CSS</span>
-                <span class="skill">JavaScript</span>
-                <span class="skill">React</span>
-                <span class="skill">Node.js</span>
-                <span class="skill">Python</span>
-                <span class="skill">Git & GitHub</span>
-                <span class="skill">REST APIs</span>
-                <span class="skill">SQL</span>
+        <!-- SKILLS -->
+        <section class="skills-section">
+            <h2>Skills & Technologies</h2>
+
+            <div class="skills-grid">
+                <div class="skill">HTML5</div>
+                <div class="skill">CSS3</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">React</div>
+                <div class="skill">Java</div>
+                <div class="skill">Springboot</div>
+                <div class="skill">Python</div>
+                <div class="skill">REST APIs</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Git & GitHub</div>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer>
-            © 2025 Kiran Kumar Asapu | Software Engineer
+            © 2025 Your Name · Software Engineer
         </footer>
 
-    </div>
+    </main>
 
 </body>
 </html>
