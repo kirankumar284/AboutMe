@@ -1,4 +1,4 @@
-## 📌 GitHub Pages: Static Hosting Only
+## 📌 GitHub Pages: Static Hosting
 GitHub Pages is a static site hosting service.
 It does not run backend code or servers.
 
@@ -8,9 +8,7 @@ It does not run backend code or servers.
 * No databases or APIs hosted on GitHub Pages
 
 ## 🚀 GitHub Pages Deployment (Behind the Scenes)
-
 This project is hosted using **GitHub Pages**.
-
 When GitHub Pages is enabled (**Settings → Pages → main branch → root**), GitHub automatically sets up a **system-managed GitHub Actions workflow** called:
 
 ```
