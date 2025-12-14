@@ -1,3 +1,12 @@
+## 📌 GitHub Pages: Static Hosting Only
+GitHub Pages is a static site hosting service.
+It does not run backend code or servers.
+
+### What “static” means:
+* Files are served as-is from a CDN
+* No server-side execution (no Node.js, Python, Java, etc.)
+* No databases or APIs hosted on GitHub Pages
+
 ## 🚀 GitHub Pages Deployment (Behind the Scenes)
 
 This project is hosted using **GitHub Pages**.
@@ -89,3 +98,30 @@ Live Website
 * CDN-backed performance
 * Versioned deployments & rollbacks
 * Enterprise-grade pipeline, simplified
+
+Absolutely — here’s a **short, clean, README-ready note** you can paste directly 👇
+
+---
+
+## 📄 GitHub Pages Support
+
+**GitHub Pages is a static site hosting service.**
+
+### ✅ Supported
+
+* Static files: **HTML, CSS, JavaScript**
+* Assets: images, fonts, JSON
+* Frontend frameworks (**React, Vue, Angular, etc.**) - After build [compile → bundle → output static files]
+* UI libraries (Tailwind, Material UI, Bootstrap)
+* GitHub Actions–based build & deploy workflows
+
+### ❌ Not Supported
+
+* Backend/server-side code (Node.js, Python, Java, etc.)
+* Server-Side Rendering (SSR)
+* Databases or APIs
+
+> **Rule of thumb:** If your app can be built into static files, GitHub Pages can host it.
+
+---
+
